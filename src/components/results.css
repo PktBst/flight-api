@@ -1,0 +1,49 @@
+.search-results{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.flight{
+    background-color: #1a4d2f;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 35vh;
+    margin: 2vh;
+}
+
+
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.price .cost{
+    font-size:xx-large;
+    font-weight: 700;
+}
+
+.cost-title , .tax {
+    color: rgb(202, 202, 202);
+    font-weight: 400;
+}
+
+.tax{
+    margin-left: 10px;
+}
+
+.flight-price{
+    margin: 6vh;
+}
+
+h1{
+    font-size:x-large;
+    font-weight: 350;
+}
+
+.date, .route{
+    color: rgb(202, 202, 202);
+}
