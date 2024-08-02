@@ -7,10 +7,11 @@ import SearchResults from './components/SearchResults';
 function App() {
   const [origin, setOrigin] = useState("SYD");
   const [destination, setDestination] = useState("JFK");
-  const [cabinSelection, setCabinSelection] = useState("Economy");
+  const [cabinSelection, setCabinSelection] = useState("Economy")
 
   const [searchResults, setSearchResults] = useState(null)
   const [isLoading, setisLoading] = useState(false)
+  const [noResultFound, setnoResultFound] = useState(false)
 
   const handleOriginChange = (event) => {
     setOrigin(event.target.value);
@@ -64,6 +65,11 @@ function App() {
         console.log('Response:', response.data.data);
         setSearchResults(response.data.data)
         setisLoading(false)
+        if(response.data.data.length===0){
+          setnoResultFound(true)
+        }else{
+          setnoResultFound(false)
+        }
     } catch (error) {
         console.error('Error:', error);
         setisLoading(false)
@@ -99,7 +105,7 @@ function App() {
           </select>
         </div>
 
-          <div className="dropdown">
+        <div className="dropdown">
           <label htmlFor="cabin">Cabin Selection</label>
           <select id="cabin" value={cabinSelection} onChange={handleCabinChange}>
             <option value="Economy">Economy</option>
@@ -107,15 +113,12 @@ function App() {
             <option value="First">First</option>
           </select>
         </div>
-{/* 
-        <div>
-          <p>Selected Origin: {origin}</p>
-          <p>Selected Destination: {destination}</p>
-          <p>Selected Cabin: {cabinSelection}</p>
-        </div> */}
+
         <button onClick={handleSubmit}>Search</button>
       </header>
       {isLoading && <div style={{"color":"white"}}>Loading...</div>}
+      {!isLoading && noResultFound && <div style={{"color":"white"}}>No flights found!</div>}
+
       {!isLoading && searchResults && <SearchResults results={searchResults} origin={origin} destination={destination}/>}
     </div>
   );

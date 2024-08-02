@@ -11,7 +11,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   position: relative;
-  right:12vh;
+  right:13vh;
 }
 
 button{
@@ -66,14 +66,13 @@ label{
   -webkit-box-shadow: -1px 5px 6px -4px rgba(0,0,0,1);
   -moz-box-shadow: -1px 5px 6px -4px rgba(0,0,0,1);
   box-shadow: -1px 5px 6px -4px rgba(0,0,0,1);
+  padding-right:10px;
 }
 
 .dropdown:hover{
   background-color: #1c2519;
   box-shadow: none;
-  select{
-    border-bottom: white solid 2px;
-  }
+  border-bottom: white solid 0.1px;
 }
 
 .flight .material-symbols-outlined{
@@ -86,3 +85,4 @@ label{
   color: grey;
   padding-left:40px;
 }
+
