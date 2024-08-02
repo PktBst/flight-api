@@ -3,6 +3,8 @@ import './results.css'
 
 export default function SearchResults(props) {
   const SearchResults=props.results
+  const origin=props.origin
+  const destination=props.destination
   return (
     <div className='search-results'>
         {SearchResults.map((flight,index)=>(
@@ -10,7 +12,9 @@ export default function SearchResults(props) {
             
           <div className="material-symbols-outlined">travel</div>
           <h1>{flight.partner_program}</h1>
-          <div className='route'>{"origin->destination"}</div>
+          <div className='route'>{origin}
+          <span class="material-symbols-outlined">arrow_right_alt</span>
+            {destination}</div>
           <div className='date'>2024-07-09 - 2024-10-07</div>
       
           <div className="flight-price">

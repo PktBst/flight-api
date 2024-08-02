@@ -5,7 +5,7 @@ import SearchResults from './components/SearchResults';
 
 
 function App() {
-  const [origin, setOrigin] = useState("JFK");
+  const [origin, setOrigin] = useState("SYD");
   const [destination, setDestination] = useState("JFK");
   const [cabinSelection, setCabinSelection] = useState("Economy");
 
@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h6>Choose Origin & Destination Airports</h6>
+        <h6>Choose Origin & Destination Airports:</h6>
         
         <div className="dropdown">
           <label htmlFor="origin">Origin</label>
@@ -116,7 +116,7 @@ function App() {
         <button onClick={handleSubmit}>Search</button>
       </header>
       {isLoading && <div style={{"color":"white"}}>Loading...</div>}
-      {searchResults && <SearchResults results={searchResults}/>}
+      {!isLoading && searchResults && <SearchResults results={searchResults} origin={origin} destination={destination}/>}
     </div>
   );
 }

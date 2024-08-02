@@ -10,8 +10,11 @@
     color: white;
     border-radius: 15px;
     padding: 20px;
-    width: 35vh;
+    width: fit-content;
     margin: 2vh;
+}
+.flight:hover{
+    background-color: #153d26;
 }
 
 
@@ -22,13 +25,14 @@
 }
 
 .price .cost{
-    font-size:xx-large;
+    font-size:x-large;
     font-weight: 700;
 }
 
 .cost-title , .tax {
     color: rgb(202, 202, 202);
     font-weight: 400;
+    font-size: small;
 }
 
 .tax{
@@ -36,14 +40,15 @@
 }
 
 .flight-price{
-    margin: 6vh;
+    margin: 1.5vh;
 }
 
 h1{
-    font-size:x-large;
+    font-size:medium;
     font-weight: 350;
 }
 
 .date, .route{
     color: rgb(202, 202, 202);
+    font-size: smaller;
 }

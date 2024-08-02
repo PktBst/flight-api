@@ -7,40 +7,59 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  right:12vh;
 }
 
 button{
   background-color: #38b8a6;
   color: white;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border: none;
+  position: relative;
+  right:80px;
+}
+
+button:hover{
+  background-color: #29897c;
 }
 
 select{
   background-color: inherit;
   color:grey;
   border: none;
+  outline: none;
   width: inherit;
+  padding: 0;
+  padding-left: 6px;
+  padding-bottom: 8px;
+  padding-right: 10px;
 }
 
-select:hover{
+select option{
+  width: 100%;
   border: none;
+  outline: none;
 }
+
 
 label{
   font-size: x-small;
   display: block;
   color: gray;
+  position: relative;
+  top:8px;
+  padding-left: 10px
 }
+
 
 .dropdown{
   background-color: #181818;
   border-radius: 3px;
-  padding: 10px;
   width: 250px;
   margin: 20px;
   text-align: left;
@@ -52,8 +71,18 @@ label{
 .dropdown:hover{
   background-color: #1c2519;
   box-shadow: none;
-  border-bottom: solid white 1px;
+  select{
+    border-bottom: white solid 2px;
+  }
 }
 
+.flight .material-symbols-outlined{
+  position: relative;
+  top:5px
+}
 
-
+.App-header h6{
+  margin: 0;
+  color: grey;
+  padding-left:40px;
+}
