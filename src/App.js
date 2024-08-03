@@ -117,7 +117,7 @@ function App() {
         <button onClick={handleSubmit}>Search</button>
       </header>
       {isLoading && <div style={{"color":"white"}}>Loading...</div>}
-      {!isLoading && noResultFound && <div style={{"color":"white"}}>No flights found!</div>}
+      {!isLoading && noResultFound && <div style={{"color":"white"}}>Try another search route.</div>}
 
       {!isLoading && searchResults && <SearchResults results={searchResults} origin={origin} destination={destination}/>}
     </div>
